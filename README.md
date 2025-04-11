@@ -1,3 +1,4 @@
+🌐 Markets Economics
 Frontend: Angular 17, TypeScript, Bootstrap
 
 Backend: ASP.Net Core Web API, C#, Entity Framework Core
