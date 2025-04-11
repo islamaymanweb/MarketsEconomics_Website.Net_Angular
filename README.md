@@ -58,5 +58,5 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/MarketsEconomics.git
+   git clone https://github.com/islamaymanweb/MarketsEconomics.git
    cd MarketsEconomics/API
