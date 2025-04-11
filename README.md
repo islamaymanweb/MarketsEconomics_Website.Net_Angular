@@ -1,11 +1,12 @@
 🌐 Markets Economics
+
 Frontend: Angular 17, TypeScript, Bootstrap
 
 Backend: ASP.Net Core Web API, C#, Entity Framework Core
 
 Database: SQL Server
 
-Architecture: Clean architecture with Repository & Unit of Work patterns
+Architecture: Clean architecture with Repository 
 
 Authentication: JWT-based user authentication and role-based authorization
 
