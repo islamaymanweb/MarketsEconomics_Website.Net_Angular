@@ -32,12 +32,20 @@ A modern blog platform built with **ASP.NET Core Web API** and **Angular**, focu
 - RxJS, HttpClient
 - Lazy loading and modular routing
 
+## 📺 Watch on YouTube
+
+Check out the full demo of the **Markets Economics Blog** on YouTube:
+
+🔗 [Watch Now on YouTube](https://youtu.be/8rrD-P4fI4U?si=4jRSU7mWhoDlJmiS)
+
+[![Watch on YouTube](https://img.youtube.com/vi/8rrD-P4fI4U/0.jpg)](https://youtu.be/8rrD-P4fI4U?si=4jRSU7mWhoDlJmiS)
+
+> 📌 Don’t forget to like and subscribe for more content!
+
 
 📝 To Do (Future Features)
-🔐 JWT Authentication (Login/Register)
-
 🌍 Multi-language support (Arabic)
-
+---
 
 🧑‍💻 Author
 Islam Ayman
