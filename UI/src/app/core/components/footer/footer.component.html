@@ -1,0 +1,165 @@
+<!-- 
+<footer class="bg-primary text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+  
+      <div class="col-md-4">
+        <h5 class="fw-bold">
+          <i class="bi bi-graph-up-arrow me-2"></i> Markets Economics
+        </h5>
+        <p class="small text-white-50">
+          Delivering insights into markets, banking, and financial policy with
+          clarity and depth.
+        </p>
+      </div>
+
+      
+      <div class="col-md-2">
+        <h6 class="fw-semibold text-white">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a [routerLink]="['/home']" class="footer-link">Home</a></li>
+          <li><a [routerLink]="['/blog']" class="footer-link">Blog</a></li>
+          <li><a [routerLink]="['/about']" class="footer-link">About</a></li>
+          <li>
+            <a [routerLink]="['/contact']" class="footer-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+    
+      <div class="col-md-3">
+        <h6 class="fw-semibold text-white">Follow Us</h6>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white fs-5"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white fs-5"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light mt-4" />
+
+    <div class="text-center text-white-50 small">
+      &copy; {{ currentYear }} Markets Economics. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+ -->
+<div class="navbar-spacer"></div>
+
+<footer class="footer bg-dark text-white">
+  <div class="container">
+    <div class="row gy-5">
+      <!-- Company Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand d-flex align-items-center mb-4">
+          <i class="bi bi-currency-exchange fs-2 text-primary me-3"></i>
+          <h2 class="h4 mb-0">
+            Markets<span class="text-primary">Economics</span>
+          </h2>
+        </div>
+        <p class="footer-text">
+          Delivering insights into markets, banking, and financial policy with
+          clarity and depth.
+        </p>
+
+        <!-- Newsletter -->
+        <div class="mt-4">
+          <h6 class="footer-title">Subscribe to our newsletter</h6>
+          <div class="input-group mb-3">
+            <input
+              type="email"
+              class="form-control bg-dark text-white border-secondary"
+              placeholder="Your email"
+              aria-label="Email"
+            />
+            <button class="btn btn-primary px-3" type="button">
+              <i class="bi bi-send"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-3">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a [routerLink]="['/home']" class="footer-link">Home</a></li>
+          <li><a [routerLink]="['/blog']" class="footer-link">Blog</a></li>
+          <li>
+            <a [routerLink]="['/research']" class="footer-link">Research</a>
+          </li>
+          <li><a [routerLink]="['/about']" class="footer-link">About Us</a></li>
+          <li>
+            <a [routerLink]="['/contact']" class="footer-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-2 col-md-3">
+        <h6 class="footer-title">Services</h6>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Market Analysis</a></li>
+          <li><a href="#" class="footer-link">Investment Consulting</a></li>
+          <li><a href="#" class="footer-link">Economic Reports</a></li>
+          <li><a href="#" class="footer-link">Portfolio Management</a></li>
+          <li><a href="#" class="footer-link">Training</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-title">Contact Us</h6>
+        <ul class="footer-contact">
+          <li class="d-flex mb-3">
+            <i class="bi bi-geo-alt-fill text-primary me-3 mt-1"></i>
+            <span>123 Financial District,Egypt, NY 10001</span>
+          </li>
+          <li class="d-flex mb-3">
+            <i class="bi bi-telephone-fill text-primary me-3 mt-1"></i>
+            <span>+1 (555) 123-4567</span>
+          </li>
+          <li class="d-flex mb-3">
+            <i class="bi bi-envelope-fill text-primary me-3 mt-1"></i>
+            <span>{{ email }}</span>
+          </li>
+        </ul>
+
+        <!-- Social Media -->
+        <div class="mt-4">
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <hr class="border-secondary opacity-25 mt-5" />
+      <div class="d-md-flex justify-content-between align-items-center py-3">
+        <div class="text-white-50 small mb-2 mb-md-0">
+          &copy; {{ currentYear }} Markets Economics. All Rights Reserved.
+        </div>
+
+        <p class="mt-2 text-center text-white">
+          <a
+            style="text-decoration: none; color: rgb(251, 255, 255)"
+            class="border-secondary text-white mt-5"
+            href="https://www.linkedin.com/in/islam-ayman-2406a2277"
+            >Islam Ayman <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

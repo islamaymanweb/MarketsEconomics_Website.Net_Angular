@@ -1,0 +1,110 @@
+<app-slider></app-slider>
+
+<div class="container py-2">
+  <div class="row g-4">
+    <ng-container *ngIf="blogs$ | async as blogs">
+      <!-- 
+        <div
+          class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden blog-card transition"
+        >
+         
+          <div class="blog-image-wrapper">
+            <img
+              [src]="blog.featuredImageUrl"
+              [alt]="blog.title"
+              class="blog-image"
+            />
+          </div>
+
+        
+          <div class="card-body d-flex flex-column p-4 bg-white">
+            <h5 class="card-title mb-2 text-dark fw-semibold">
+              {{ blog.title }}
+            </h5>
+
+            <p class="card-text text-muted flex-grow-1 small">
+              {{ blog.shortDescription | slice : 0 : 130 }}...
+            </p>
+
+           
+            <div class="mb-3">
+              <div class="text-muted small">
+                <i class="bi bi-person-circle me-1"></i> {{ blog.author }}
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar3 me-1"></i>
+                {{ blog.publishedDate | date : "MMM dd, yyyy" }}
+              </div>
+            </div>
+
+           
+            <a
+              [routerLink]="['/blog', blog.urlHandle]"
+              class="btn btn-outline-primary rounded-pill mt-auto"
+            >
+              <i class="bi bi-book me-1"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="col-12 col-sm-6 col-lg-4" *ngFor="let blog of blogs">
+        <div
+          class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden blog-card transition"
+        >
+          <!-- Blog Image with Animation -->
+          <div class="blog-image-wrapper position-relative">
+            <img
+              [src]="blog.featuredImageUrl"
+              [alt]="blog.title"
+              class="blog-image"
+              loading="lazy"
+            />
+
+            <!-- Badges/Categories -->
+            <div
+              class="position-absolute top-0 start-0 p-3 d-flex flex-wrap gap-2"
+            >
+              <span
+                *ngFor="let category of blog.categories"
+                class="badge rounded-pill bg-secondary me-2 px-3 py-2"
+              >
+                {{ category.name }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="card-body d-flex flex-column p-4 bg-white">
+            <h5 class="card-title mb-2 text-dark fw-semibold">
+              {{ blog.title }}
+            </h5>
+
+            <p class="card-text text-muted flex-grow-1 small">
+              {{ blog.shortDescription | slice : 0 : 130 }}...
+            </p>
+
+            <!-- Author and Date -->
+            <div class="mb-3">
+              <div class="text-muted small">
+                <i class="bi bi-person-circle me-1"></i> {{ blog.author }}
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar3 me-1"></i>
+                {{ blog.publishedDate | date : "MMM dd, yyyy" }}
+              </div>
+            </div>
+
+            <!-- Read More -->
+            <a
+              [routerLink]="['/blog', blog.urlHandle]"
+              class="btn btn-outline-primary rounded-pill mt-auto"
+            >
+              <i class="bi bi-book me-1"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

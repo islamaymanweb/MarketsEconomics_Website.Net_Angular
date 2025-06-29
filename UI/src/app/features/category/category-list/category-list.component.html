@@ -1,0 +1,98 @@
+<!-- <div class="container">
+  <h1 class="mt-3">Category List</h1>
+  <div class="d-flex justify-content-end mt-3">
+    <a [routerLink]="['/admin/categories/add']" class="btn btn-primary"
+      >Add Category</a
+    >
+  </div>
+  <ng-container *ngIf="categories$ | async as categories">
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Url Handle</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories$ | async">
+          <td>{{ category.id }}</td>
+          <td>{{ category.name }}</td>
+          <td>{{ category.urlHandle }}</td>
+          <td>
+            <a
+              [routerLink]="['/admin/categories', category.id]"
+              class="btn btn-light"
+              >Edit</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>
+ -->
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h2 class="h4 fw-bold mb-1">Categories</h2>
+      <p class="text-muted mb-0">Manage your content categories</p>
+    </div>
+    <a [routerLink]="['/admin/categories/add']" class="btn btn-primary">
+      <i class="bi bi-plus-circle me-2"></i>Add Category
+    </a>
+  </div>
+
+  <div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+      <ng-container *ngIf="categories$ | async as categories">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th class="ps-4">ID</th>
+                <th>Category Name</th>
+                <th>URL Handle</th>
+                <th class="text-end pe-4">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let category of categories">
+                <td class="ps-4 text-muted">#{{ category.id }}</td>
+                <td>
+                  <span class="fw-semibold">{{ category.name }}</span>
+                </td>
+                <td>
+                  <span class="badge bg-light text-dark font-monospace">{{
+                    category.urlHandle
+                  }}</span>
+                </td>
+                <td class="text-end pe-4">
+                  <div class="d-flex justify-content-end gap-2">
+                    <a
+                      [routerLink]="['/admin/categories', category.id]"
+                      class="btn btn-sm btn-outline-primary px-3"
+                    >
+                      <i class="bi bi-pencil-square me-1"></i>Edit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div *ngIf="categories.length === 0" class="text-center py-5">
+          <div class="mb-3">
+            <i class="bi bi-tags display-5 text-muted"></i>
+          </div>
+          <h5 class="text-muted">No categories found</h5>
+          <p class="text-muted">
+            Click "Add Category" to create your first category
+          </p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

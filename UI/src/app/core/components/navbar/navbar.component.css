@@ -1,0 +1,128 @@
+.navbar {
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed; /* تغيير من fixed-top إلى fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+/* العنصر الفاصل بين الـ Navbar والمحتوى */
+.navbar-spacer {
+  height: 70px; /* يتناسب مع ارتفاع الـ Navbar */
+  display: block;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.nav-link {
+  padding: 0.7rem 1rem !important;
+  margin: 0 0.2rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+}
+
+/* Active Link Indicator */
+.active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--bs-primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active .active-indicator {
+  width: 70%;
+}
+
+.nav-link.active {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  background: #1e293b;
+}
+
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0.2rem 0.5rem;
+  width: auto;
+}
+
+.dropdown-item:hover {
+  background: var(--bs-primary);
+  color: white !important;
+}
+
+/* User Avatar */
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  font-weight: 600;
+}
+
+/* Login Button */
+.btn-outline-light {
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.862);
+  color: black;
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem !important;
+    margin: 0.2rem 0;
+  }
+  
+
+  .dropdown-menu {
+    background: rgba(30, 41, 59, 0.95);
+    margin-left: 2rem;
+    border-left: 3px solid var(--bs-primary);
+  }
+}
+
+/* Animation for Navbar on Scroll */
+.navbar-scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(15, 23, 42, 0.98) !important;
+  backdrop-filter: blur(10px);
+}

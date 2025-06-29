@@ -1,0 +1,329 @@
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a [routerLink]="['/']" class="navbar-brand d-flex align-items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        class="bi bi-graph-up-arrow me-2"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"
+        />
+      </svg>
+      <span class="fw-bold">Markets Economics</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            [routerLink]="['/home']"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-house-door me-1"></i> <strong>Home</strong>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/about']"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-info-circle me-1"></i> <strong>About Us</strong>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/contact']"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-chat me-1"></i> <strong>Contact</strong>
+          </a>
+        </li>
+
+        <ng-container
+          *ngIf="user !== undefined && user?.roles?.includes('Writer')"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle d-flex align-items-center"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-shield-lock me-1"></i> Admin
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin/categories']"
+                >
+                  <i class="bi bi-tags me-2"></i> Categories
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin/blogposts']"
+                >
+                  <i class="bi bi-file-earmark-post me-2"></i> Blog Posts
+                </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin']"
+                >
+                  <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ng-container>
+      </ul>
+
+      <div class="d-flex">
+        <ng-container *ngIf="user === undefined; else showLogout">
+          <a [routerLink]="['/login']" class="btn btn-outline-light">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+          </a>
+        </ng-container>
+        <ng-template #showLogout>
+          <div class="d-flex align-items-center">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="d-none d-md-inline">{{ user?.email }}</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end shadow"
+                aria-labelledby="dropdownUser"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-person me-2"></i> Profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-gear me-2"></i> Settings</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <button class="dropdown-item" (click)="onLogout()">
+                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
+ -->
+
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-gradient-dark shadow-sm fixed"
+>
+  <div class="container">
+    <!-- Brand Logo -->
+    <a [routerLink]="['/']" class="navbar-brand d-flex align-items-center">
+      <i class="bi bi-currency-exchange fs-4 text-primary me-2"></i>
+      <span class="fw-bold"
+        >Markets<span class="text-primary"> Economics</span></span
+      >
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a
+            [routerLink]="['/home']"
+            class="nav-link position-relative"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-house-door me-2"></i>
+            <span>Home</span>
+            <span class="active-indicator"></span>
+          </a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a
+            [routerLink]="['/about']"
+            class="nav-link position-relative"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-info-circle me-2"></i>
+            <span>About Us</span>
+            <span class="active-indicator"></span>
+          </a>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item">
+          <a
+            [routerLink]="['/contact']"
+            class="nav-link position-relative"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-headset me-2"></i>
+            <span>Contact</span>
+            <span class="active-indicator"></span>
+          </a>
+        </li>
+
+        <!-- Admin Dropdown -->
+        <ng-container
+          *ngIf="user !== undefined && user?.roles?.includes('Writer')"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle d-flex align-items-center position-relative"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-shield-lock me-2"></i>
+              <span>Admin</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark shadow-lg">
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin/categories']"
+                >
+                  <i class="bi bi-tags me-2"></i> Categories
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin/blogposts']"
+                >
+                  <i class="bi bi-file-earmark-post me-2"></i> Blog Posts
+                </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  [routerLink]="['/admin']"
+                >
+                  <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ng-container>
+      </ul>
+
+      <!-- Auth Section -->
+      <div class="d-flex">
+        <ng-container *ngIf="user === undefined; else showLogout">
+          <a [routerLink]="['/login']" class="btn btn-outline-light btn-sm">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+          </a>
+        </ng-container>
+        <ng-template #showLogout>
+          <div class="d-flex align-items-center">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div
+                  class="avatar-sm bg-primary rounded-circle d-flex align-items-center justify-content-center me-2"
+                >
+                  {{ user?.email?.charAt(0) }}
+                </div>
+                <span class="d-none d-md-inline">{{ user?.email }}</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow-lg"
+                aria-labelledby="dropdownUser"
+              >
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="bi bi-person me-2"></i> Profile
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="bi bi-gear me-2"></i> Settings
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <button
+                    class="dropdown-item d-flex align-items-center"
+                    (click)="onLogout()"
+                  >
+                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="navbar-spacer"></div>
