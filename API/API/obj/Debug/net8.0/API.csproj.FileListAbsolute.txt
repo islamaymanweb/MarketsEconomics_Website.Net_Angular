@@ -148,3 +148,4 @@ C:\Users\AS\Desktop\MarketsEconomics_App.Net_Angular\API\API\obj\Debug\net8.0\re
 C:\Users\AS\Desktop\MarketsEconomics_App.Net_Angular\API\API\obj\Debug\net8.0\API.pdb
 C:\Users\AS\Desktop\MarketsEconomics_App.Net_Angular\API\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\AS\Desktop\MarketsEconomics_App.Net_Angular\API\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\AS\Desktop\MarketsEconomics_App.Net_Angular\API\API\obj\Debug\net8.0\API.sourcelink.json
