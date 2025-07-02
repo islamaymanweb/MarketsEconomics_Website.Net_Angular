@@ -12,7 +12,7 @@ A modern blog platform built with **ASP.NET Core Web API** and **Angular**, focu
 - 📦 Backend API using ASP.NET Core + EF Core
 - 🌐 Frontend UI built with Angular 17
 - 🧑‍💼 Admin Dashboard
-- 📂 Clean and scalable folder structure (N-tier + Modular Angular)
+- 📂 Clean and scalable folder structure 
 - 🔒 Secured API architecture (JWT ready structure)
 
 ---
